@@ -1,0 +1,646 @@
+@import "reset.css";
+@import url('https://fonts.googleapis.com/css2?family=Charis+SIL&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Charis+SIL&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* Custom Properties for the colors */
+:root{
+    --navbg: #51063C;
+    --nav_hover: #A25353;
+    --button: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(241,171,134,1) 0%, rgba(121,9,88,1) 100%);
+    --button_hover: linear-gradient(-90deg, rgba(2,0,36,1) 0%, rgba(241,171,134,1) 0%, rgba(121,9,88,1) 100%);
+    --underline-before: #343434; 
+    --text: #F1AB86;
+    --textinner: #150E0E;  
+    --icon: #710954;
+    --overlay: rgb(255, 255, 255, 0.5);
+    --underline: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(121,9,88,1) 48%, rgba(0,212,255,1) 100%);
+    --shadow: rgb(0, 17, 20);
+    --footer: #330326;
+    --headerbg: #51063c56;
+}
+
+
+/* Body Styles */
+/* The styles for the body of the index page */
+body {
+    background-repeat: no-repeat;
+    position: relative;
+    background-size: cover;
+    animation: background 40s infinite;
+    color: var(--textinner);
+    min-height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Styles for the body of other pages */
+/* Set the min-height to push the footer to the bottom of the page */
+body#fullnav {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* ********************************************************************************************* */
+
+/* Header Styles */
+/* The styles for the logo of the page on all pages except the index page*/
+header {
+    background-color: var(--navbg);
+}
+
+header div.image {
+    justify-content: stretch;
+}
+
+header img {
+    width: 7.7rem;
+    height: 5rem;
+}
+
+/* ********************************************************************************************* */
+
+/* Main Container Styles */
+/* Style for the title in all the pages */
+div#title h1{
+    font-family: 'Charis SIL', 'Times New Roman', serif;
+    font-weight: 800;
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+/* Main header of the index page */
+header#main {
+    display: flex;
+    margin: 1rem 1.2rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Main container for all the pages except the index page */
+main#container {
+    display: flex;
+    flex-grow: 1;
+    align-items: stretch;
+}
+
+main>section {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* The main container in the library page and the search page*/
+div.library {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.library #title {
+    margin: 0 auto;
+}
+
+/* ********************************************************************************************* */
+
+/* Index Page Specific Styles */
+/* The header in the index page */
+
+header#main {
+    background-color: var(--headerbg);
+}
+
+header#main img {
+    width: 7.7rem;
+    height: max-content;
+}
+
+header ul {
+    display: flex;
+}
+
+header li {
+    margin: 0 1rem;
+}
+
+header#main a {
+    color: var(--textinner);
+    text-decoration: none;
+    font-family: 'Charis SIL', serif;
+}
+
+/* The dropdown box on the index page */
+form select {
+    width: 15rem;
+    height: 3rem;
+}
+
+/* The nav bars for the index page */
+header div:nth-of-type(2) a,
+header div:nth-of-type(3) a {
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+header#main div:nth-of-type(2) li:hover a,
+header#main div:nth-of-type(3) li:hover a{
+    background: var(--navbg);
+    color: var(--text);
+    letter-spacing: 0.02rem;
+}
+
+/* ********************************************************************************************* */
+
+/* Nav Styles */
+/* Nav bar styles for all pages except the index page */
+nav.sideflex {
+    background-color: var(--navbg);
+    flex:0 0 max-content;
+}
+
+nav.sideflex a {
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 600;
+}
+
+nav.sideflex li {
+    margin: 2rem 0;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    text-align: center;
+}
+
+nav.sideflex li:hover {
+    background-color: var(--nav_hover);
+    letter-spacing: 0.02rem;
+    color: var(--textinner);
+}
+
+nav.sideflex li:hover a {
+    color: var(--textinner);
+}
+
+/* ********************************************************************************************* */
+
+/* Search Bar Styles */
+/* The search bar on the index page and search result page*/
+form.search {
+    display: flex;
+    justify-content: center;
+}
+form.search div{
+    display: flex;
+    justify-content: center;
+}
+
+form.search input::placeholder{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+}
+
+form.search input,
+form.search select {
+    border: 0.2rem solid var(--navbg);
+}
+
+/* ********************************************************************************************* */
+
+/* Image Container and Images */
+/* Image Container on the index and library page */
+section {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 1rem auto;
+}
+
+section figure img {
+    width: 14.063rem;
+    height: 18.75rem;
+    margin: 0.5rem;
+    cursor: pointer;
+}
+
+/* ********************************************************************************************* */
+
+/* Movies Styles */
+/* All the images in index page and library*/
+section>div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.4rem;
+}
+
+/* When a movie image is hovered over */
+.clicked:hover {
+    border: 0.01rem solid var(--textinner);
+    border-radius: 0.3rem;
+}
+
+/* When a movie image is clicked */
+.clicked:active {
+    width: 13.75rem;
+    height: 18.438rem;
+}
+
+/* Styles for the text under every image */
+figcaption {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin: 0.5rem 0;
+    color: var(--textinner);
+}
+
+/* ********************************************************************************************* */
+
+/* All the styles applied to the search bar on the index page and search page */
+/* To merge the icon with the search bar */
+.input-icons {
+    position: relative;
+}
+
+.input-icons .merge-icon {
+    position: absolute;
+    top: 1rem;
+    left: 49rem;
+}
+
+.input-field {
+    height: 3rem;
+    padding-right: 40rem;
+    border-top-right-radius: 2.5rem;
+    border-bottom-right-radius: 2.5rem;
+}
+
+.genre {
+    border-top-left-radius: 2.5rem;
+    border-bottom-left-radius: 2.5rem;
+}
+
+/* ********************************************************************************************* */
+
+/* Icons on Forms Styles */
+/* To merge the icon with the input on all the forms on the Login, Register, Search, and forgot page*/
+.input_icons {
+    position: relative;
+    margin: 1rem; 
+    display: flex;
+    flex-direction: column;
+}
+
+.input_icons .login-icon{
+    position: absolute;
+    top: 2.5rem;
+    left: 3.5rem;
+}
+
+.input_field {
+    padding: 1rem 10rem 1rem 4rem;
+    width: max-content;
+    margin: 0 0 0 2rem;
+    border: none;
+    background: none; 
+}
+
+/* All the icons on every page */
+.icon {
+    color: var(--icon);
+}
+
+/* For the input forms with no icons -- don't create space for icons */
+.no-icons{
+    padding: 0.5rem;
+}
+
+/* ********************************************************************************************* */
+
+/* Form Styles */
+/* General Styles for the forms */
+section#form {
+    background-color: var(--text);
+    flex-direction: column;
+}
+
+/* For the headings in all the forms */
+#form #title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.4rem;
+}
+
+/* All the form labels */
+label.block {
+    padding: 0 0 0.5rem 2rem;
+    width: max-content;
+}
+
+/* Styles for the login page */
+aside .input_icons {
+    margin: 1rem 0 1rem 3rem;
+}
+
+/* Sets padding on all the forms */
+form.pad {
+    padding: 0 3rem 0 2rem;
+}
+
+/* For the checkbox and forgot password on the login page */
+.dif {
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.dif a {
+    text-decoration: none;
+    color: var(--navbg);
+    font-weight: 500;
+}
+
+/* Warning */
+div.warning p {
+    padding: 0.5rem;
+    background-color: var(--navbg);
+    color: var(--text);
+    font-weight: 700;
+    width: max-content;
+}
+
+/* ********************************************************************************************* */
+
+/* Buttons */
+/* Styles for all the submit buttons on all the forms */
+
+#style-button button,
+aside form.button button {
+    background: var(--button);
+    padding: 0.5rem;
+    width: max-content;
+    margin: 1rem;
+    border: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: var(--textinner);
+    box-shadow: -0.05rem -0.05rem var(--shadow);
+}
+
+/* When the buttons are hovered */
+#style-button button:hover,
+aside form.button button:hover {
+    cursor: pointer;
+    background: var(--button_hover);
+    letter-spacing: 0.05rem;
+    box-shadow: 0.05rem 0.05rem var(--shadow);
+}
+
+/* Form Buttons in Previous and Next */
+aside form.button {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* All the submit buttons on all the forms on all pages */
+button[type="submit"] {
+    align-self: center;
+}
+
+/* ********************************************************************************************* */
+
+/* Input form styles */
+/* Fancy styles for the lines under the input box of each form */
+span.underline::before {
+    position: absolute;
+    content: '';
+    height: 0.1rem;
+    background: var(--underline-before);
+    width: 24.6rem;
+    margin: 0 0 1rem 2rem;
+}
+
+span.underline::after {
+    position: absolute;
+    content: '';
+    height: 0.15rem;
+    background: var(--underline);
+    width: 24.6rem;
+    margin: 0 0 1rem 2rem;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all 0.3s ease;
+}
+
+.input_field:focus ~ .underline::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.input_field:focus{
+    outline: none;
+}
+
+/* ********************************************************************************************* */
+
+/* Footer Styles */
+
+footer {
+    padding: 1.2rem;
+    background-color: var(--text);
+    border-top: 0.25rem solid var(--navbg);
+    margin-top: auto;
+}
+
+footer div {
+    justify-content: stretch;
+    margin: 0 auto;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--footer);
+    font-family: 'Charis SIL', 'Times New Roman', serif;
+}
+
+footer div a {
+    font: inherit;
+    text-decoration: none;
+}
+
+/* ********************************************************************************************* */
+
+/* Styles specific to the Add video page */
+
+/* For the lookup button on the addvid page*/
+button.search {
+    margin-top: 0.5rem;
+}
+
+fieldset {
+    border: 0.2rem solid var(--navbg); /* set border for fieldset */
+    border-radius: 0.5rem;
+    margin: 0 10rem 1rem 3rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+  
+fieldset div {
+    justify-content: flex-start;
+}
+
+/* fieldset label */
+legend {
+    background-color: var(--navbg);
+    color: var(--text);
+    font-weight: 500;
+    padding: 0.2rem;
+    border-radius: 0.2rem;
+    margin-left: 0.2rem;
+}
+
+.input_icons select {
+    background-color: var(--navbg);
+    color: var(--text);
+}
+
+.input_icons .search {
+    width: max-content;
+    margin-left: auto;
+}
+
+.input_icons #rating {
+    width: fit-content;
+}
+
+select#genre {
+    border-radius: 0.5rem;
+}
+
+.input_icons textarea {
+    border-left: 0.2rem solid var(--icon);
+    margin-bottom: 0.5rem;
+}
+
+/* ********************************************************************************************* */
+
+/* Search Page Specific Styles */
+
+#max {
+    width: 3rem;
+}
+
+/* ********************************************************************************************* */
+
+/* Details Page Specific Styles */
+
+#details {
+    flex-direction: column;
+}
+
+figure.detail-img {
+    margin: 0 auto;
+}
+
+#details p {
+    margin: 0.5rem;
+    font-weight: 400;
+    font-size: 1.2rem;
+    color: var(--textinner);
+}
+
+#details p em {
+    font-style: oblique;
+    font-weight: 700;
+}
+
+/* ********************************************************************************************* */
+
+/* Animation Keyframes for background on all pages*/
+@keyframes background {
+    0% {
+        background-image: url(../img/background1.jpg);
+        background-color: var(--overlay);
+        background-blend-mode: overlay;
+    }
+    25% {
+        background-image: url(../img/background2.jpg);
+        background-color: var(--overlay);
+        background-blend-mode: overlay;
+    }
+    55% {
+        background-image: url(../img/background3.jpg);
+        background-color: var(--overlay);
+        background-blend-mode: overlay;
+    }
+    85% {
+        background-image: url(../img/background4.jpg);
+        background-color: var(--overlay);
+        background-blend-mode: overlay;
+    }
+    100% {
+        background-image: url(../img/background5.jpg);
+        background-color: var(--overlay);
+        background-blend-mode: overlay;
+    }
+}
+
+@-moz-keyframes background {
+    0% {
+        -moz-background-image: url(../img/background1.jpg);
+        -moz-background-color: var(--overlay);
+        -moz-background-blend-mode: overlay;
+    }
+    25% {
+        -moz-background-image: url(../img/background2.jpg);
+        -moz-background-color: var(--overlay);
+        -moz-background-blend-mode: overlay;
+    }
+    55% {
+        -moz-background-image: url(../img/background3.jpg);
+        -moz-background-color: var(--overlay);
+        -moz-background-blend-mode: overlay;
+    }
+    85% {
+        -moz-background-image: url(../img/background4.jpg);
+        -moz-background-color: var(--overlay);
+        -moz-background-blend-mode: overlay;
+    }
+    100% {
+        -moz-background-image: url(../img/background5.jpg);
+        -moz-background-color: var(--overlay);
+        -moz-background-blend-mode: overlay;
+    }
+}
+
+@-ms-keyframes background {
+    0% {
+        -moz-background-image: url(../img/background1.jpg);
+        -moz-background-color: var(--overlay);
+        -moz-background-blend-mode: overlay;
+    }
+    25% {
+        -moz-background-image: url(../img/background2.jpg);
+        -moz-background-color: var(--overlay);
+        -moz-background-blend-mode: overlay;
+    }
+    55% {
+        -moz-background-image: url(../img/background3.jpg);
+        -moz-background-color: var(--overlay);
+        -moz-background-blend-mode: overlay;
+    }
+    85% {
+        -moz-background-image: url(../img/background4.jpg);
+        -moz-background-color: var(--overlay);
+        -moz-background-blend-mode: overlay;
+    }
+    100% {
+        -moz-background-image: url(../img/background5.jpg);
+        -moz-background-color: var(--overlay);
+        -moz-background-blend-mode: overlay;
+    }
+}

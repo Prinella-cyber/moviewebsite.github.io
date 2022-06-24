@@ -1,0 +1,91 @@
+<!-- Login Page for Old Users to Login -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Styles/main.css">
+    <script src="https://kit.fontawesome.com/139739279f.js" crossorigin="anonymous"></script>
+    <title>Login Page</title>
+</head>
+
+<body id="fullnav">
+    <header>
+        <div class="image">
+            <img src="./img/StubbyShows.jpg" alt="Logo of Stubby Shows">
+        </div>
+    </header>
+    <main id="container">
+        <nav class="sideflex">
+            <div>
+                <ul>
+                    <li>
+                        <a href="./index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="./library.html">My Library</a>
+                    </li>
+                    <li>
+                        <a href="./addvid.html">Add Video</a>
+                    </li>
+                    <li>
+                        <a href="">Edit Video</a>
+                    </li>
+                    <li>
+                        <a href="">Delete Video</a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li><a href="./login.html">Login</a></li>
+                    <li><a href="">Edit Profile</a></li>
+                    <li><a href="">Delete Account</a></li>
+                    <li><a href="./register.html">Sign Up</a></li>
+                </ul>
+            </div>
+        </nav>
+        <section id="form">
+            <form method="post" class="pad">
+                <div id="title">
+                    <h1>Login</h1>
+                </div>
+                <div class="input_icons">
+                    <label for="uname" class="block">Enter your Username</label>
+                    <input type="text" id="uname" name="uname" class="input_field" required>
+                    <span class="underline"></span>
+                    <span class="fa-solid fa-user icon login-icon"></span>
+                </div>
+                <div class="input_icons">
+                    <label for="password" class="block">Enter your Password</label>
+                    <input type="password" id="password" name="password" class="input_field" required>
+                    <span class="underline"></span>
+                    <span class="fa-solid fa-lock icon login-icon"></span>
+                </div>
+                <aside>
+                    <div class="input_icons warning">
+                        <p><span class="fa-solid fa-triangle-exclamation"></span> This is an error message</p>
+                    </div>
+                    <div class="input_icons dif">
+                        <input type="checkbox" id="remember" name="remember">
+                        <label for="remember">Remember Me</label>
+                    </div>
+                    <div class="input_icons" id="style-button">
+                        <button type="submit">Sign In</button>
+                    </div>
+                    <div class="input_icons dif">
+                        <p><a href="./forgot.html">Forgot password?</a></p>
+                    </div>
+                </aside>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <div>&#169; 2022 - Prisca Onyebuchi - COIS 3420 Web Dev</div>
+    </footer>
+</body>
+
+</html>

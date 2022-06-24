@@ -1,0 +1,169 @@
+<!-- This is the Add Movie page where the user comes to add a movie to its collection -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Styles/main.css">
+    <title>Add Movie</title>
+</head>
+
+<body id="fullnav">
+
+    <header>
+        <div class="image">
+            <img src="./img/StubbyShows.jpg" alt="Logo of Stubby Shows">
+        </div>
+    </header>
+    <main id="container">
+        <nav class="sideflex">
+            <div>
+                <ul>
+                    <li>
+                        <a href="./index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="./library.html">My Library</a>
+                    </li>
+                    <li>
+                        <a href="./addvid.html">Add Video</a>
+                    </li>
+                    <li>
+                        <a href="">Edit Video</a>
+                    </li>
+                    <li>
+                        <a href="">Delete Video</a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li><a href="./login.html">Login</a></li>
+                    <li><a href="">Edit Profile</a></li>
+                    <li><a href="">Delete Account</a></li>
+                    <li><a href="./register.html">Sign Up</a></li>
+                </ul>
+            </div>
+        </nav>
+        <section id="form">
+            <div id="title">
+                <h1>Add Movie</h1>
+            </div>
+            <form class="pad">
+                <div class="input_icons">
+                    <label for="title-search" class="block">Title:</label>
+                    <input name="title" type="text" id="title-search" class="input_field no-icons" required>
+                    <span class="underline"></span>
+                    <!-- <button class="search">LookUp</button> -->
+                </div>
+                <div class="input_icons">
+                    <label for="rating" class="block">Rating:</label>
+                    <input name="rating" id="rating" type="range" class="input_field no-icons">
+                </div>
+                <fieldset>
+                    <legend>Genre</legend>
+                    <div>
+                        <input type="checkbox" name="romance" id="rom">
+                        <label for="rom">Romance</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="comedy" id="com">
+                        <label for="com">Comedy</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="horror" id="horror">
+                        <label for="horror">Horror</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="scifi" id="scifi">
+                        <label for="scifi">Sci-fi</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="Inspirational" id="inspire">
+                        <label for="inspire">Inspirational</label>
+                    </div>
+                </fieldset>
+                <div class="input_icons">
+                    <label for="mpa" class="block">MPAA:</label>
+                    <input name="mpa" id="mpa" type="text" class="input_field no-icons" required>
+                    <span class="underline"></span>
+                </div>
+                <div class="input_icons">
+                    <label for="year" class="block">Year:</label>
+                    <input name="year" id="year" type="text" class="input_field no-icons" required>
+                    <span class="underline"></span>
+                </div>
+                <div class="input_icons">
+                    <label for="runtime" class="block">Run Time:</label>
+                    <input name="runtime" id="runtime" type="text" class="input_field no-icons" required>
+                    <span class="underline"></span>
+                </div>
+                <div class="input_icons">
+                    <label for="studio" class="block">Studio:</label>
+                    <input name="studio" id="studio" type="text" class="input_field no-icons" required>
+                    <span class="underline"></span>
+                </div>
+                <div class="input_icons">
+                    <label for="T_release" class="block">Theatre Release:</label>
+                    <input name="T_release" id="T_release" type="text" class="input_field no-icons" required>
+                    <span class="underline"></span>
+                </div>
+                <div class="input_icons">
+                    <label for="D_release" class="block">DVD Release:</label>
+                    <input name="D_release" id="D_release" type="text" class="input_field no-icons" required>
+                    <span class="underline"></span>
+                </div>
+                <div class="input_icons">
+                    <label for="actors" class="block">Actors:</label>
+                    <input name="actors" id="actors" type="text" class="input_field no-icons" required>
+                    <span class="underline"></span>
+                </div>
+                <div class="input_icons">
+                    <label for="cover" class="block">Upload Cover:</label>
+                    <input name="cover" id="cover" type="file" class="input_field no-icons" required>
+                </div>
+                <div class="input_icons">
+                    <label for="link" class="block">Link Cover:</label>
+                    <input name="link" id="link" type="text" class="input_field no-icons" required>
+                    <span class="underline"></span>
+                </div>
+                <div class="input_icons">
+                    <label for="plot" class="block">Plot Summary:</label>
+                    <textarea name="plot" id="plot" cols="50" rows="10" class="input_field no-icons"
+                        required></textarea>
+                    <span class="underline"></span>
+                </div>
+                <fieldset>
+                    <legend>Video Type</legend>
+                    <div>
+                        <input type="radio" name="vid-type" id="dvd">
+                        <label for="dvd">DVD</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="vid-type" id="bluray">
+                        <label for="bluray">BluRay</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="vid-type" id="dsd">
+                        <label for="dsd">Digital SD</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="vid-type" id="dhd">
+                        <label for="dhd">Digital HD</label>
+                    </div>
+                </fieldset>
+                <div class="input_icons" id="style-button">
+                    <button type="submit">Add Video</button>
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <div>&#169; 2022 - Prisca Onyebuchi - COIS 3420 Web Dev</div>
+    </footer>
+</body>
+
+</html>
